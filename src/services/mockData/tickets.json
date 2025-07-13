@@ -1,0 +1,98 @@
+[
+  {
+    "Id": 1,
+    "clientId": "1",
+    "title": "Email Server Configuration Issue",
+    "description": "Unable to send emails from our company domain. Getting SMTP authentication errors when trying to connect to the mail server.",
+    "status": "In Progress",
+    "priority": "High",
+    "category": "Email Support",
+    "createdDate": "2024-01-15T09:30:00Z",
+    "updatedDate": "2024-01-16T14:20:00Z",
+    "assignedTo": "Rajesh Kumar"
+  },
+  {
+    "Id": 2,
+    "clientId": "1",
+    "title": "Network Performance Optimization",
+    "description": "Our office network has been running slowly, particularly during peak hours. Need assessment and optimization of current network infrastructure.",
+    "status": "Open",
+    "priority": "Medium",
+    "category": "Network Support",
+    "createdDate": "2024-01-18T11:15:00Z",
+    "updatedDate": "2024-01-18T11:15:00Z",
+    "assignedTo": "Priya Sharma"
+  },
+  {
+    "Id": 3,
+    "clientId": "2",
+    "title": "ERP System Integration",
+    "description": "Need assistance integrating our new ERP system with existing inventory management software. Require API setup and data migration support.",
+    "status": "Pending",
+    "priority": "High",
+    "category": "Software Development",
+    "createdDate": "2024-01-12T16:45:00Z",
+    "updatedDate": "2024-01-17T10:30:00Z",
+    "assignedTo": "Amit Singh"
+  },
+  {
+    "Id": 4,
+    "clientId": "3",
+    "title": "Mobile App Bug Fixes",
+    "description": "Several bugs reported in our Android application including login issues and push notification problems. Need urgent fixes for app store update.",
+    "status": "Resolved",
+    "priority": "High",
+    "category": "Mobile Development",
+    "createdDate": "2024-01-10T08:20:00Z",
+    "updatedDate": "2024-01-16T17:00:00Z",
+    "assignedTo": "Neha Gupta"
+  },
+  {
+    "Id": 5,
+    "clientId": "2",
+    "title": "Server Backup Configuration",
+    "description": "Setting up automated daily backups for our main database server. Need configuration of backup schedules and disaster recovery procedures.",
+    "status": "Closed",
+    "priority": "Medium",
+    "category": "Server Management",
+    "createdDate": "2024-01-08T13:10:00Z",
+    "updatedDate": "2024-01-15T16:45:00Z",
+    "assignedTo": "Vikram Mehta"
+  },
+  {
+    "Id": 6,
+    "clientId": "4",
+    "title": "Website Security Audit",
+    "description": "Requesting comprehensive security audit of our e-commerce website. Need vulnerability assessment and security enhancement recommendations.",
+    "status": "In Progress",
+    "priority": "High",
+    "category": "Security",
+    "createdDate": "2024-01-14T10:00:00Z",
+    "updatedDate": "2024-01-17T12:15:00Z",
+    "assignedTo": "Arjun Patel"
+  },
+  {
+    "Id": 7,
+    "clientId": "1",
+    "title": "Office WiFi Upgrade",
+    "description": "Current WiFi infrastructure cannot handle increased number of devices. Need upgrade to support 200+ concurrent connections with better coverage.",
+    "status": "Open",
+    "priority": "Medium",
+    "category": "Network Support",
+    "createdDate": "2024-01-19T14:30:00Z",
+    "updatedDate": "2024-01-19T14:30:00Z",
+    "assignedTo": "Sanjay Verma"
+  },
+  {
+    "Id": 8,
+    "clientId": "3",
+    "title": "Database Performance Tuning",
+    "description": "Database queries running extremely slow affecting application performance. Need optimization of database indexes and query performance tuning.",
+    "status": "Pending",
+    "priority": "High",
+    "category": "Database Support",
+    "createdDate": "2024-01-16T09:45:00Z",
+    "updatedDate": "2024-01-17T15:20:00Z",
+    "assignedTo": "Ravi Kumar"
+  }
+]

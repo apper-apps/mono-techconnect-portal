@@ -1,0 +1,122 @@
+[
+  {
+    "Id": 1,
+    "clientId": "1",
+    "name": "Network Infrastructure Proposal.pdf",
+    "type": "PDF",
+    "size": 2048576,
+    "uploadDate": "2024-01-15T10:30:00Z",
+    "category": "Project Files",
+    "url": "/documents/network-proposal.pdf"
+  },
+  {
+    "Id": 2,
+    "clientId": "1",
+    "name": "Monthly Service Invoice - January 2024.pdf",
+    "type": "PDF",
+    "size": 156834,
+    "uploadDate": "2024-01-31T16:45:00Z",
+    "category": "Invoice",
+    "url": "/documents/invoice-jan-2024.pdf"
+  },
+  {
+    "Id": 3,
+    "clientId": "2",
+    "name": "ERP Implementation Timeline.xlsx",
+    "type": "XLSX",
+    "size": 445678,
+    "uploadDate": "2024-01-12T14:20:00Z",
+    "category": "Project Files",
+    "url": "/documents/erp-timeline.xlsx"
+  },
+  {
+    "Id": 4,
+    "clientId": "2",
+    "name": "System Architecture Document.docx",
+    "type": "DOCX",
+    "size": 1234567,
+    "uploadDate": "2024-01-18T11:15:00Z",
+    "category": "Report",
+    "url": "/documents/system-architecture.docx"
+  },
+  {
+    "Id": 5,
+    "clientId": "3",
+    "name": "Mobile App Testing Report.pdf",
+    "type": "PDF",
+    "size": 876543,
+    "uploadDate": "2024-01-16T13:30:00Z",
+    "category": "Report",
+    "url": "/documents/app-testing-report.pdf"
+  },
+  {
+    "Id": 6,
+    "clientId": "3",
+    "name": "Annual Maintenance Contract.pdf",
+    "type": "PDF",
+    "size": 567890,
+    "uploadDate": "2024-01-05T09:00:00Z",
+    "category": "Contract",
+    "url": "/documents/amc-contract.pdf"
+  },
+  {
+    "Id": 7,
+    "clientId": "4",
+    "name": "Security Audit Checklist.xlsx",
+    "type": "XLSX",
+    "size": 234567,
+    "uploadDate": "2024-01-14T15:45:00Z",
+    "category": "Project Files",
+    "url": "/documents/security-checklist.xlsx"
+  },
+  {
+    "Id": 8,
+    "clientId": "4",
+    "name": "Website Security Report - Q1 2024.pdf",
+    "type": "PDF",
+    "size": 1876543,
+    "uploadDate": "2024-01-20T10:15:00Z",
+    "category": "Report",
+    "url": "/documents/security-report-q1.pdf"
+  },
+  {
+    "Id": 9,
+    "clientId": "1",
+    "name": "Network Diagram - Office Layout.png",
+    "type": "IMAGE",
+    "size": 987654,
+    "uploadDate": "2024-01-17T12:00:00Z",
+    "category": "Project Files",
+    "url": "/documents/network-diagram.png"
+  },
+  {
+    "Id": 10,
+    "clientId": "2",
+    "name": "Database Backup Procedures.docx",
+    "type": "DOCX",
+    "size": 345678,
+    "uploadDate": "2024-01-19T08:30:00Z",
+    "category": "Report",
+    "url": "/documents/backup-procedures.docx"
+  },
+  {
+    "Id": 11,
+    "clientId": "3",
+    "name": "Project Completion Certificate.pdf",
+    "type": "PDF",
+    "size": 123456,
+    "uploadDate": "2024-01-22T14:00:00Z",
+    "category": "Contract",
+    "url": "/documents/completion-certificate.pdf"
+  },
+  {
+    "Id": 12,
+    "clientId": "4",
+    "name": "IT Infrastructure Assessment.zip",
+    "type": "ZIP",
+    "size": 5432109,
+    "uploadDate": "2024-01-21T16:20:00Z",
+    "category": "Report",
+    "url": "/documents/infrastructure-assessment.zip"
+  }
+]
