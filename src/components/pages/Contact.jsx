@@ -40,7 +40,7 @@ const Contact = () => {
     {
       icon: "MapPin",
       title: "Head Office",
-      details: ["Delhi, India"],
+      details: ["K-1292/15, Ground Floor, Sangam Vihar, South Delhi, India"],
       description: "Corporate headquarters and main administrative office"
     },
     {
@@ -58,7 +58,7 @@ const Contact = () => {
     {
       icon: "Phone",
       title: "Phone",
-      details: ["+91 98765 43210", "+91 87654 32109"],
+      details: ["+91 95607 85875", "+91-120-4276643"],
       description: "Business hours: Mon-Fri 9:00 AM - 6:00 PM IST"
     }
   ];
