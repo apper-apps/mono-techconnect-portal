@@ -53,14 +53,14 @@ const Footer = () => {
                 <ApperIcon name="MapPin" className="w-5 h-5 text-primary-400 mt-0.5" />
                 <div>
                   <p className="text-sm text-slate-400">Head Office:</p>
-                  <p className="text-sm">Delhi, India</p>
+                  <p className="text-sm">K-1292/15, Ground Floor, Sangam Vihar, South Delhi, India</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <ApperIcon name="Building" className="w-5 h-5 text-primary-400 mt-0.5" />
                 <div>
                   <p className="text-sm text-slate-400">Operational Office:</p>
-                  <p className="text-sm">Noida Sector 128</p>
+                  <p className="text-sm">Noida Sector 120 & Noida Sector 128</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
@@ -69,7 +69,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <ApperIcon name="Phone" className="w-5 h-5 text-primary-400" />
-                <p className="text-sm">+91 98765 43210</p>
+                <p className="text-sm">+91 95607 85875</p>
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@ const Footer = () => {
 
         <div className="border-t border-slate-800 mt-8 pt-8 text-center">
           <p className="text-slate-400 text-sm">
-            © 2024 Techlopers Solutions Private Limited. All rights reserved. Incorporated in 2016 under Companies Act, India.
+            © 2025 Techlopers Solutions Private Limited. All rights reserved. Incorporated in 2016 under Companies Act, India.
           </p>
         </div>
       </div>
