@@ -112,13 +112,14 @@ if (!user) {
               <div className="w-10 h-10 bg-gradient-to-br from-slate-200 to-slate-300 rounded-full flex items-center justify-center">
                 <ApperIcon name="User" className="w-5 h-5 text-slate-600" />
               </div>
-              <div className="flex-1 min-w-0">
-<p className="text-sm font-medium text-slate-900 truncate">
+<div className="flex-1 min-w-0">
+                <p className="text-sm font-medium text-slate-900 truncate">
                   {user.firstName} {user.lastName}
                 </p>
                 <p className="text-xs text-slate-500 truncate">
                   {user.emailAddress}
                 </p>
+              </div>
             </div>
             <Button 
               variant="secondary" 
@@ -216,7 +217,7 @@ if (!user) {
                     <div className="w-10 h-10 bg-gradient-to-br from-slate-200 to-slate-300 rounded-full flex items-center justify-center">
                       <ApperIcon name="User" className="w-5 h-5 text-slate-600" />
 </div>
-                    <div className="flex-1 min-w-0">
+<div className="flex-1 min-w-0">
                       <p className="text-sm font-medium text-slate-900 truncate">
                         {user.firstName} {user.lastName}
                       </p>
