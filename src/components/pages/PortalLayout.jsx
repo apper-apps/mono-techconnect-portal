@@ -1,7 +1,9 @@
-import { useState, useEffect } from "react";
-import { Outlet, Link, useLocation, useNavigate } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useContext, useState } from "react";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
+import { AuthContext } from "@/App";
 import ApperIcon from "@/components/ApperIcon";
 import Button from "@/components/atoms/Button";
 
@@ -9,21 +11,27 @@ const PortalLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const [client, setClient] = useState(null);
+  const { logout } = useContext(AuthContext);
+  
+  // Get authentication status with proper error handling
+  const userState = useSelector((state) => state.user);
+  const user = userState?.user;
+  const isAuthenticated = userState?.isAuthenticated || false;
 
-  useEffect(() => {
-    const clientData = localStorage.getItem("client");
-    if (!clientData) {
-      navigate("/portal");
-      return;
+  // Redirect to login if not authenticated
+  if (!isAuthenticated) {
+    navigate("/login");
+    return null;
+  }
+
+const handleLogout = async () => {
+    try {
+      await logout();
+      toast.success("Logged out successfully");
+    } catch (error) {
+      console.error("Logout failed:", error);
+      toast.error("Logout failed");
     }
-    setClient(JSON.parse(clientData));
-  }, [navigate]);
-
-  const handleLogout = () => {
-    localStorage.removeItem("client");
-    toast.success("Logged out successfully");
-    navigate("/");
   };
 
   const sidebarItems = [
@@ -56,7 +64,7 @@ const PortalLayout = () => {
     return location.pathname.startsWith(path);
   };
 
-  if (!client) {
+if (!user) {
     return null;
   }
 
@@ -105,13 +113,12 @@ const PortalLayout = () => {
                 <ApperIcon name="User" className="w-5 h-5 text-slate-600" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-slate-900 truncate">
-                  {client.contactPerson}
+<p className="text-sm font-medium text-slate-900 truncate">
+                  {user.firstName} {user.lastName}
                 </p>
                 <p className="text-xs text-slate-500 truncate">
-                  {client.companyName}
+                  {user.emailAddress}
                 </p>
-              </div>
             </div>
             <Button 
               variant="secondary" 
@@ -208,18 +215,18 @@ const PortalLayout = () => {
                   <div className="flex items-center space-x-3 mb-4">
                     <div className="w-10 h-10 bg-gradient-to-br from-slate-200 to-slate-300 rounded-full flex items-center justify-center">
                       <ApperIcon name="User" className="w-5 h-5 text-slate-600" />
-                    </div>
+</div>
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium text-slate-900 truncate">
-                        {client.contactPerson}
+                        {user.firstName} {user.lastName}
                       </p>
                       <p className="text-xs text-slate-500 truncate">
-                        {client.companyName}
+                        {user.emailAddress}
                       </p>
                     </div>
                   </div>
                   <Button 
-                    variant="secondary" 
+                    variant="secondary"
                     size="sm" 
                     className="w-full"
                     onClick={handleLogout}
