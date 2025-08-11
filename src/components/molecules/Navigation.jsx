@@ -22,15 +22,16 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-600 to-primary-700 rounded-lg flex items-center justify-center">
-              <ApperIcon name="Zap" className="w-6 h-6 text-white" />
-            </div>
-            <div className="hidden sm:block">
-              <span className="text-xl font-bold gradient-text">Techlopers</span>
-              <p className="text-sm text-slate-600 -mt-1">Solutions</p>
-            </div>
-          </Link>
+          <div className="flex items-center">
+            <Link to="/" className="flex items-center space-x-3">
+              <img
+                src="https://content.jdmagicbox.com/v2/comp/delhi/k4/011pxx11.xx11.160322121532.x7k4/catalogue/techlopers-solutions-pvt-ltd-laxmi-nagar-delhi-logo-designers-ucan4jlj72.jpg"
+                alt="Techlopers Solutions"
+                className="h-12 w-auto"
+              />
+
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
