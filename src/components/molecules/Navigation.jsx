@@ -48,7 +48,7 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Link to="/portal">
+            <Link to="https://ticket.techlopers.com">
               <Button size="sm" className="ml-4">
                 <ApperIcon name="Lock" className="w-4 h-4 mr-2" />
                 Client Portal
@@ -91,7 +91,7 @@ const Navigation = () => {
                     {item.name}
                   </Link>
                 ))}
-                <Link to="/portal" onClick={() => setIsOpen(false)}>
+                <Link to="https://ticket.techlopers.com" onClick={() => setIsOpen(false)}>
                   <Button size="sm" className="w-full justify-center mt-4">
                     <ApperIcon name="Lock" className="w-4 h-4 mr-2" />
                     Client Portal
