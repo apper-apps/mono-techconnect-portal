@@ -47,12 +47,15 @@ const PortalLogin = () => {
     }
   };
 
+ {/*
   const demoCredentials = [
     { email: "admin@techcorp.com", company: "TechCorp Solutions" },
     { email: "it@innovate.in", company: "Innovate Industries" },
     { email: "support@digitalwave.com", company: "Digital Wave Enterprises" },
     { email: "admin@futuretech.co.in", company: "Future Tech Systems" }
   ];
+
+  */}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-primary-50 flex items-center justify-center p-4">
