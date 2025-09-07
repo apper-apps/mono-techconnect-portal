@@ -1,6 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
+// Providers
+import VoiceSearchProvider from "@/components/providers/VoiceSearchProvider";
+
 // Public Pages
 import Layout from "@/components/pages/Layout";
 import Home from "@/components/pages/Home";
@@ -14,12 +17,12 @@ import PortalLayout from "@/components/pages/PortalLayout";
 import Dashboard from "@/components/pages/Dashboard";
 import ClientTickets from "@/components/pages/ClientTickets";
 import ClientDocuments from "@/components/pages/ClientDocuments";
-
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Routes>
+    <VoiceSearchProvider>
+      <Router>
+        <div className="App">
+          <Routes>
           {/* Public Routes */}
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
@@ -55,10 +58,11 @@ function App() {
             borderRadius: "12px",
             fontFamily: "Inter, sans-serif"
           }}
-          style={{ zIndex: 9999 }}
+style={{ zIndex: 9999 }}
         />
-      </div>
-    </Router>
+        </div>
+      </Router>
+    </VoiceSearchProvider>
   );
 }
 

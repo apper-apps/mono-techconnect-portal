@@ -3,7 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import ApperIcon from "@/components/ApperIcon";
 import Button from "@/components/atoms/Button";
-
+import VoiceSearchButton from "@/components/atoms/VoiceSearchButton";
+import { toast } from "react-toastify";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -34,7 +35,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+<div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -48,8 +49,28 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
+            <VoiceSearchButton
+              onResult={(query) => {
+                toast.success(`Voice search: "${query}"`);
+                // Handle global voice search - could trigger site-wide search
+                console.log('Global voice search:', query);
+              }}
+              onError={(error) => {
+                toast.error(`Voice search failed: ${error}`);
+              }}
+              className="mx-2"
+              commands={{
+                'search': (query) => {
+                  // Extract search terms after "search"
+                  const searchTerm = query.replace(/search\s+/i, '');
+                  if (searchTerm) {
+                    toast.info(`Searching for: ${searchTerm}`);
+                  }
+                }
+              }}
+            />
             <Link to="https://ticket.techlopers.com">
-              <Button size="sm" className="ml-4">
+              <Button size="sm" className="ml-2">
                 <ApperIcon name="Lock" className="w-4 h-4 mr-2" />
                 Client Portal
               </Button>
@@ -57,7 +78,25 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+<div className="md:hidden flex items-center space-x-3">
+            <VoiceSearchButton
+              onResult={(query) => {
+                toast.success(`Voice search: "${query}"`);
+                console.log('Mobile voice search:', query);
+              }}
+              onError={(error) => {
+                toast.error(`Voice search failed: ${error}`);
+              }}
+              size="sm"
+              commands={{
+                'search': (query) => {
+                  const searchTerm = query.replace(/search\s+/i, '');
+                  if (searchTerm) {
+                    toast.info(`Searching for: ${searchTerm}`);
+                  }
+                }
+              }}
+            />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-slate-600 hover:text-primary-700 focus:outline-none"
@@ -68,7 +107,7 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <AnimatePresence>
+<AnimatePresence>
           {isOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
@@ -77,12 +116,35 @@ const Navigation = () => {
               className="md:hidden border-t border-slate-200 py-4"
             >
               <div className="flex flex-col space-y-3">
+                <div className="px-4">
+                  <div className="text-sm font-medium text-slate-700 mb-2">Voice Search</div>
+                  <VoiceSearchButton
+                    onResult={(query) => {
+                      toast.success(`Voice search: "${query}"`);
+                      console.log('Mobile menu voice search:', query);
+                    }}
+                    onError={(error) => {
+                      toast.error(`Voice search failed: ${error}`);
+                    }}
+                    className="w-full justify-center"
+                    size="md"
+                    variant="secondary"
+                    commands={{
+                      'search': (query) => {
+                        const searchTerm = query.replace(/search\s+/i, '');
+                        if (searchTerm) {
+                          toast.info(`Searching for: ${searchTerm}`);
+                        }
+                      }
+                    }}
+                  />
+                </div>
                 {navItems.map((item) => (
                   <Link
                     key={item.path}
                     to={item.path}
                     onClick={() => setIsOpen(false)}
-                    className={`text-sm font-medium py-2 transition-colors duration-200 ${
+                    className={`text-sm font-medium py-2 px-4 transition-colors duration-200 ${
                       isActive(item.path)
                         ? "text-primary-700"
                         : "text-slate-600 hover:text-primary-700"
@@ -91,12 +153,14 @@ const Navigation = () => {
                     {item.name}
                   </Link>
                 ))}
-                <Link to="https://ticket.techlopers.com" onClick={() => setIsOpen(false)}>
-                  <Button size="sm" className="w-full justify-center mt-4">
-                    <ApperIcon name="Lock" className="w-4 h-4 mr-2" />
-                    Client Portal
-                  </Button>
-                </Link>
+                <div className="px-4">
+                  <Link to="https://ticket.techlopers.com" onClick={() => setIsOpen(false)}>
+                    <Button size="sm" className="w-full justify-center mt-2">
+                      <ApperIcon name="Lock" className="w-4 h-4 mr-2" />
+                      Client Portal
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </motion.div>
           )}
