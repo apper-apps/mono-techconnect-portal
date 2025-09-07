@@ -19,14 +19,13 @@ export const VoiceSearchProvider = ({ children }) => {
   const handleVoiceResult = useCallback((result) => {
     setLastQuery(result);
     toast.success(`Voice search: "${result}"`);
-toast.success(`Voice search: "${result}"`);
-    
-    // Broadcast the result to any listening components
+// Broadcast the result to any listening components
     if (typeof window !== 'undefined' && window.CustomEvent) {
       window.dispatchEvent(new window.CustomEvent('voiceSearchResult', {
         detail: { query: result }
       }));
     }
+  }, []);
 
   const handleVoiceError = useCallback((error) => {
     console.error('Voice search error:', error);
